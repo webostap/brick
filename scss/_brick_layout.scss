@@ -1,0 +1,141 @@
+.brick-layout {
+    position: relative;
+    max-width: 2000px;
+    margin: 0 auto;
+//    padding: 0 50px;
+    margin-bottom: 100px;
+
+    --right: 1080px;
+
+    @media (max-width: 1900px) {
+        --right: 60vw;
+    }
+    @media (max-width: 1500px) {
+        .brick-text {
+            padding: 50px 30px;
+        }
+    }
+    @media (max-width: 900px) {
+        --right: 100vw;
+        display: flex;
+        flex-direction: column;
+        &__left {
+            position: relative  !important;
+            position: static !important;
+            width: 100% !important;
+            height: unset !important;
+        }
+        &__photo {
+            position: static;
+            width: 100%;
+        }
+    }
+
+    &.js-sticky {
+        .brick-layout__left {
+//            position: fixed;
+            top: -1px;
+            left: 0;
+            bottom: 0;
+            right: var(--right);
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            height: 100vh;
+//            &.static {
+//                position: absolute;
+//                top: calc(100% - 100vh);
+//            }
+        }
+    }
+    &__left {
+        float: left;
+        width: calc(100% - var(--right));
+    }
+    &__right {
+        margin-left: auto;
+        width: var(--right);
+        display: flex;
+        justify-content: center;
+    }
+    &__photo {
+        @extend %cover;
+        display: flex;
+        justify-content: center;
+        img {
+            object-fit: contain;
+        }
+    }
+}
+
+.brick-text {
+    max-width: 1000px;
+    padding: 70px;
+//    padding-right: 0;
+//    padding: 70px 0 70px 70px;
+//    font-size: 1.5rem;
+//    line-height: 1.6em;
+}
+
+.brick-text p {
+    /*font-size: 2rem;*/
+    line-height: 1.6em;
+}
+
+.brick-table {
+    margin: 0;
+    width: 100%;
+    border-collapse: separate;
+
+    td {
+        padding: 10px;
+
+        &:first-child {
+            text-align: left;
+            padding-left: 30px;
+        }
+
+        &:last-child {
+            text-align: center;
+            /*font-weight: 600;*/
+        }
+    }
+
+    tr:nth-child(2n) {
+        background: #e5e5e5;
+
+        td:first-child {
+            border-radius: 7px 0 0 7px;
+        }
+
+        td {
+            border-radius: 0 7px 7px 0;
+        }
+    }
+}
+
+.brick-list {
+    list-style: none;
+    padding-left: 4em;
+
+    li {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -3em;
+            top: 0.55em;
+            height: 0.7em;
+            width: 2.4em;
+            background: #ffd400;
+        }
+
+        &:after {
+            content: ';';
+            /*font-weight: bold;*/
+        }
+
+    }
+}

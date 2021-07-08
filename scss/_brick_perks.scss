@@ -1,0 +1,77 @@
+.brick-perks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(Max(120px, 30%), 1fr));
+    flex-grow: 1;
+
+    gap: 50px;
+
+    &__section {
+//        padding: 50px 0;
+        //        background: #333;
+        //        color: #fff;
+    }
+
+    &__layout {
+        display: flex;
+        padding: 50px 0;
+        gap: 100px;
+    }
+
+    &__annot {
+        font-size: 1.25em;
+        padding-top: 75px;
+        font-weight: 600;
+        flex-basis: Max(300px, 36%);
+        padding-left: 50px;
+    }
+}
+
+.brick_perk {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    //    justify-content: center;
+    align-items: center;
+
+
+    &__img {
+        width: 200px;
+        height: 200px;
+        margin: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 0px 20px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 0px 20px #fff6;
+        box-shadow: 0 0 0px 20px #aaa;
+//        box-shadow: 0 0 0px 20px #ddd;
+        //        box-shadow: 0 0 0px 20px var(--primary);
+
+    }
+
+    &__text {
+        font-weight: 500;
+        text-align: center;
+        span {
+            display: inline-block;
+        }
+    }
+
+
+}
+
+@media (max-width: 1800px) {
+    .brick-perks {
+        gap: 10px;
+    }
+    &__layout {
+        gap: 40px;
+    }
+    .brick_perk {
+        margin: 0;
+        &__img {
+//        margin-bottom: 30px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+}

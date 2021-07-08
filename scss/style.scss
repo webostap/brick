@@ -1,0 +1,96 @@
+@import "vars";
+
+@import "grid";
+@import "typo";
+@import "head";
+@import "front";
+@import "brick_layout";
+@import "section";
+@import "brick_perks";
+@import "calc_form";
+@import "footer";
+@import "bootstrap";
+@import "animation";
+
+#canv_modal {
+    @extend %cover;
+    position: fixed;
+    z-index: 9;
+    background: #eee;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease-out;
+
+    #canv {
+        @extend %cover;
+        transform: scale(0.2);
+        transition: 0.65s ease-out;
+        canvas {
+            cursor: grab;
+            &:active {
+                cursor: grabbing;
+            }
+        }
+    }
+
+    &.open {
+        transition: 0.3s ease-out;
+        visibility: visible;
+        opacity: 1;
+
+        #canv {
+            transform: scale(1);
+        }
+
+        #canv_close {
+
+            &:before,
+            &:after {
+                opacity: 1;
+            }
+
+            &:before {
+                transform: rotate(45deg)
+            }
+
+            &:after {
+                transform: rotate(-45deg)
+            }
+        }
+    }
+}
+
+#canv_close {
+    z-index: 999;
+    //    background: black;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+
+    &:hover {
+
+        &:before,
+        &:after {
+            box-shadow: 0 0 5px 2px #777;
+        }
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 4px;
+        background: #aaa;
+        //        border: 2px solid #000;
+        box-shadow: 0 0 3px 1px #777;
+        opacity: 0;
+        transition: 0.15s, transform .25s .4s ease-in, opacity .25s .45s;
+    }
+
+}

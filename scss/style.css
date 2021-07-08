@@ -1,0 +1,773 @@
+@charset "UTF-8";
+/* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_vars.scss */
+.brick-layout__photo, #canv2, #canv_modal, #canv_modal #canv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+/* line 9, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_vars.scss */
+:root {
+  --primary: #ffd400; }
+
+/* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_vars.scss */
+.highlight {
+  background: #ffd400;
+  margin: 0 -10px;
+  padding: 0 10px;
+  margin-right: 2px; }
+  /* line 18, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_vars.scss */
+  .highlight.intext {
+    margin-left: 2px; }
+
+/* line 23, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_vars.scss */
+.butn {
+  background: var(--primary);
+  color: #000;
+  font-weight: 500;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 7px;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+  transition: 0.2s; }
+  /* line 36, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_vars.scss */
+  .butn.disabled {
+    background: #ddd;
+    cursor: default; }
+    /* line 39, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_vars.scss */
+    .butn.disabled:hover {
+      color: inherit; }
+  /* line 45, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_vars.scss */
+  .butn:hover:not(.disabled) {
+    filter: brightness(0.9) contrast(1.5);
+    color: #000;
+    box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); }
+
+/* line 2, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_grid.scss */
+.conter {
+  max-width: 2150px;
+  margin: 0 auto;
+  padding: 0 50px; }
+
+/* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_typo.scss */
+html {
+  font-size: 24px; }
+  @media (max-width: 2000px) {
+    /* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_typo.scss */
+    html {
+      font-size: 20px; } }
+  @media (max-width: 1600px) {
+    /* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_typo.scss */
+    html {
+      font-size: 18px; } }
+
+/* line 12, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_typo.scss */
+body {
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #222; }
+
+/* line 19, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_typo.scss */
+b {
+  color: #000; }
+
+/* line 23, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_typo.scss */
+h2 {
+  color: #000;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.83em 0;
+  text-transform: uppercase; }
+
+/* line 8, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 0;
+  height: 120px; }
+  @media (max-width: 1900px) {
+    /* line 8, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+    .masthead {
+      height: 120px; } }
+  @media (max-width: 1600px) {
+    /* line 8, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+    .masthead {
+      height: 100px; } }
+
+/* line 28, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+.head-logo {
+  align-self: stretch;
+  margin-top: -20px; }
+  /* line 32, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+  .head-logo img {
+    height: 100%;
+    width: auto; }
+  /* line 38, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+  .head-logo__link {
+    display: contents; }
+
+/* line 43, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+.head-menu {
+  padding: 0 30px 0 60px;
+  display: flex;
+  list-style: none;
+  margin-bottom: -5px;
+  flex: 0.7 1 auto;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 15px; }
+  @media (max-width: 1200px) {
+    /* line 43, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+    .head-menu {
+      display: none; } }
+  /* line 60, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+  .head-menu a {
+    padding: 5px 0;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    box-shadow: none;
+    transition: 0.2s; }
+    /* line 71, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+    .head-menu a:hover {
+      box-shadow: 0 0.25em var(--primary); }
+  /* line 76, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+  .head-menu li {
+    margin: 0 10px; }
+
+/* line 83, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+.head-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px; }
+
+/* line 90, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+.head-phone {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #000; }
+
+/* line 97, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+.head-butn {
+  font-size: 1.05rem;
+  padding: 0.2em 0.75em 0.25em;
+  margin-right: -0.5em; }
+
+/* line 105, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_head.scss */
+.masthead--dark .head-menu,
+.masthead--dark .head-phone {
+  color: #fff; }
+
+/* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+.first-section {
+  min-height: calc(100vh - 100px);
+  min-height: 100vh;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column; }
+  /* line 17, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .first-section > .conter {
+    flex: 1 0 auto;
+    display: flex; }
+  /* line 23, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .first-section--dark {
+    color: #fff !important; }
+
+/* line 29, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+.front {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  /* line 36, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .front__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    width: 46%;
+    padding-top: 50px; }
+    /* line 45, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+    .front__text h1 {
+      font-size: 1.8em;
+      margin-bottom: 100px;
+      font-weight: bold;
+      transition: 0.2s;
+      transform-origin: top; }
+    /* line 55, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+    .front__text h2 {
+      font-size: 1.4em;
+      text-transform: none;
+      font-weight: 400; }
+  /* line 65, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .front__image img {
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.4)); }
+  /* line 70, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .front__canv {
+    width: 50%; }
+    /* line 76, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+    .front__canv canvas {
+      cursor: grab; }
+      /* line 79, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+      .front__canv canvas:active {
+        cursor: grabbing; }
+
+/* line 86, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+.frontpage-section {
+  padding-bottom: 85px;
+  --section-color: var(--primary); }
+  /* line 90, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .frontpage-section__title {
+    margin-bottom: 40px;
+    width: 50%;
+    padding: 25px 25px 25px 0;
+    background: var(--section-b-color);
+    position: relative; }
+    /* line 97, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+    .frontpage-section__title h2 {
+      padding-left: calc(50vw - 2150px / 2 + 50px);
+      display: inline-block;
+      font-size: 2rem;
+      color: #000;
+      text-align: center; }
+    /* line 108, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+    .frontpage-section__title::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 8px;
+      width: 5px;
+      background: white; }
+  /* line 118, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .frontpage-section.living-section {
+    --section-color: red;
+    --section-b-color: #faa; }
+  /* line 122, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .frontpage-section.office-section {
+    --section-color: var(--primary);
+    --section-b-color: var(--primary); }
+  /* line 126, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .frontpage-section.green-section {
+    --section-color: green;
+    --section-b-color: #9f9; }
+  /* line 131, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .frontpage-section__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  /* line 136, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .frontpage-section__left {
+    width: 48%;
+    padding-right: 25px;
+    display: flex; }
+  /* line 144, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .frontpage-section__right {
+    flex: 1;
+    align-self: center;
+    display: flex;
+    justify-content: center; }
+    /* line 149, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+    .frontpage-section__right img {
+      max-height: 400px; }
+  /* line 153, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .frontpage-section__subtitle {
+    text-align: center;
+    padding-right: 7px; }
+  /* line 159, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+  .frontpage-section__list {
+    padding: 0 100px 0 0;
+    list-style: none; }
+    /* line 163, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+    .frontpage-section__list li {
+      margin: 10px; }
+    /* line 166, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+    .frontpage-section__list a {
+      text-decoration: none;
+      color: #000;
+      background: #eee;
+      border-left: 7px solid var(--section-color);
+      padding: 15px 30px 15px 25px;
+      display: block;
+      transition: 0.15s; }
+      /* line 175, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_front.scss */
+      .frontpage-section__list a:hover {
+        border-left: 17px solid var(--section-color);
+        padding-right: 22px;
+        padding-left: 23px; }
+
+/* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+.brick-layout {
+  position: relative;
+  max-width: 2000px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  --right: 1080px; }
+  @media (max-width: 1900px) {
+    /* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+    .brick-layout {
+      --right: 60vw; } }
+  @media (max-width: 1500px) {
+    /* line 14, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+    .brick-layout .brick-text {
+      padding: 50px 30px; } }
+  @media (max-width: 900px) {
+    /* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+    .brick-layout {
+      --right: 100vw;
+      display: flex;
+      flex-direction: column; }
+      /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+      .brick-layout__left {
+        position: relative  !important;
+        position: static !important;
+        width: 100% !important;
+        height: unset !important; }
+      /* line 28, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+      .brick-layout__photo {
+        position: static;
+        width: 100%; } }
+  /* line 35, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+  .brick-layout.js-sticky .brick-layout__left {
+    top: -1px;
+    left: 0;
+    bottom: 0;
+    right: var(--right);
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    height: 100vh; }
+  /* line 51, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+  .brick-layout__left {
+    float: left;
+    width: calc(100% - var(--right)); }
+  /* line 55, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+  .brick-layout__right {
+    margin-left: auto;
+    width: var(--right);
+    display: flex;
+    justify-content: center; }
+  /* line 61, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+  .brick-layout__photo {
+    display: flex;
+    justify-content: center; }
+    /* line 65, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+    .brick-layout__photo img {
+      object-fit: contain; }
+
+/* line 71, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+.brick-text {
+  max-width: 1000px;
+  padding: 70px; }
+
+/* line 80, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+.brick-text p {
+  /*font-size: 2rem;*/
+  line-height: 1.6em; }
+
+/* line 85, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+.brick-table {
+  margin: 0;
+  width: 100%;
+  border-collapse: separate; }
+  /* line 90, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+  .brick-table td {
+    padding: 10px; }
+    /* line 93, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+    .brick-table td:first-child {
+      text-align: left;
+      padding-left: 30px; }
+    /* line 98, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+    .brick-table td:last-child {
+      text-align: center;
+      /*font-weight: 600;*/ }
+  /* line 104, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+  .brick-table tr:nth-child(2n) {
+    background: #e5e5e5; }
+    /* line 107, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+    .brick-table tr:nth-child(2n) td:first-child {
+      border-radius: 7px 0 0 7px; }
+    /* line 111, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+    .brick-table tr:nth-child(2n) td {
+      border-radius: 0 7px 7px 0; }
+
+/* line 117, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+.brick-list {
+  list-style: none;
+  padding-left: 4em; }
+  /* line 121, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+  .brick-list li {
+    position: relative; }
+    /* line 124, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+    .brick-list li:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -3em;
+      top: 0.55em;
+      height: 0.7em;
+      width: 2.4em;
+      background: #ffd400; }
+    /* line 135, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_layout.scss */
+    .brick-list li:after {
+      content: ';';
+      /*font-weight: bold;*/ }
+
+/* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+.section {
+  padding: 50px 0;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 40px; }
+  /* line 8, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+  .section__image {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    align-self: stretch; }
+    /* line 14, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+    .section__image img {
+      max-width: 100%;
+      top: 25%;
+      left: 25%; }
+  /* line 21, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+  .section__text {
+    padding: 75px 0;
+    width: 50%;
+    font-size: 1.25em; }
+
+/* line 34, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+#sec1 {
+  position: relative;
+  align-self: stretch;
+  padding-right: 100px; }
+  /* line 39, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+  #sec1 img {
+    position: absolute;
+    filter: drop-shadow(10px 4px 5px rgba(0, 0, 0, 0.3));
+    will-change: transform; }
+    /* line 44, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+    #sec1 img:first-child {
+      transform: translate(var(--scroll-y), calc(var(--scroll-y) * -1)); }
+    /* line 48, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+    #sec1 img:last-child {
+      transform: translate(calc(var(--scroll-y) * -1), var(--scroll-y)); }
+
+/* line 55, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+#canv2 {
+  z-index: 0;
+  margin: -100px 0;
+  background: radial-gradient(closest-side, #eee, #fff); }
+
+/* line 65, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+.sec2 .section__text {
+  background: #eee;
+  position: relative;
+  padding: 75px 50px; }
+  /* line 69, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_section.scss */
+  .sec2 .section__text:before {
+    content: '';
+    background: #eee;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -50px;
+    right: 100%; }
+
+/* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+.brick-perks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(Max(120px, 30%), 1fr));
+  flex-grow: 1;
+  gap: 50px; }
+  /* line 14, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+  .brick-perks__layout {
+    display: flex;
+    padding: 50px 0;
+    gap: 100px; }
+  /* line 20, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+  .brick-perks__annot {
+    font-size: 1.25em;
+    padding-top: 75px;
+    font-weight: 600;
+    flex-basis: Max(300px, 36%);
+    padding-left: 50px; }
+
+/* line 29, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+.brick_perk {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  /* line 37, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+  .brick_perk__img {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 0px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 0px 20px #fff6;
+    box-shadow: 0 0 0px 20px #aaa; }
+  /* line 51, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+  .brick_perk__text {
+    font-weight: 500;
+    text-align: center; }
+    /* line 54, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+    .brick_perk__text span {
+      display: inline-block; }
+
+@media (max-width: 1800px) {
+  /* line 63, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+  .brick-perks {
+    gap: 10px; }
+  /* line 66, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+  __layout {
+    gap: 40px; }
+  /* line 69, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+  .brick_perk {
+    margin: 0; }
+    /* line 71, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_brick_perks.scss */
+    .brick_perk__img {
+      width: 100px;
+      height: 100px; } }
+
+/* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+.brick-calc {
+  max-width: 960px;
+  max-width: max-content;
+  margin: 0 auto;
+  padding: 100px 30px; }
+  /* line 9, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+  .brick-calc h2 {
+    text-align: center;
+    margin-bottom: 70px;
+    border-bottom: 10px solid var(--primary); }
+  /* line 15, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+  .brick-calc__butns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; }
+
+/* line 30, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+.brick-calc {
+  max-width: 960px; }
+  /* line 34, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+  .brick-calc form input[type='number'] {
+    text-align: center;
+    font-weight: 500;
+    -moz-appearance: textfield;
+    -webkit-appearance: none; }
+    /* line 39, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+    .brick-calc form input[type='number']::-webkit-outer-spin-button, .brick-calc form input[type='number']::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+  /* line 46, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+  .brick-calc form input[type='text'] {
+    text-align: center;
+    font-weight: 500; }
+  /* line 51, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+  .brick-calc form select {
+    text-align-last: center;
+    font-weight: 500; }
+
+/* line 57, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+.input-group {
+  --igt-width: 120px; }
+
+/* line 60, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+.input-group-text {
+  min-width: var(--igt-width);
+  justify-content: center; }
+
+/* line 65, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+.input-group.js-numbers {
+  position: relative; }
+  /* line 70, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+  .input-group.js-numbers:hover .nc-plus,
+  .input-group.js-numbers:hover .nc-minus {
+    transition: opacity .15s;
+    opacity: 1; }
+  /* line 77, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+  .input-group.js-numbers .nc-plus,
+  .input-group.js-numbers .nc-minus {
+    transition: opacity .35s;
+    opacity: 0;
+    position: absolute;
+    z-index: 4;
+    top: calc(50% - 1.1em);
+    padding: 0.3em 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary);
+    color: #444;
+    cursor: pointer; }
+    /* line 93, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+    .input-group.js-numbers .nc-plus:hover,
+    .input-group.js-numbers .nc-minus:hover {
+      transform: scale(1.2);
+      transform-origin: 50% 55%; }
+  /* line 100, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+  .input-group.js-numbers .nc-minus {
+    left: 2px; }
+    /* line 102, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+    .input-group.js-numbers .nc-minus:before {
+      content: '‒'; }
+  /* line 107, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+  .input-group.js-numbers .nc-plus {
+    right: var(--igt-width); }
+    /* line 109, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_calc_form.scss */
+    .input-group.js-numbers .nc-plus:before {
+      content: '+'; }
+
+/* line 1, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_footer.scss */
+.footer {
+  height: 300px;
+  background: #323232; }
+
+/* line 2, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+.animated-childs > * {
+  opacity: 0;
+  transition: opacity 0s; }
+
+/* line 8, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+.animated-childs.visible > * {
+  opacity: 1;
+  transition: opacity 0.4s; }
+  /* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible > *:nth-child(1) {
+    transition-delay: 0.1s; }
+  /* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible > *:nth-child(2) {
+    transition-delay: 0.2s; }
+  /* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible > *:nth-child(3) {
+    transition-delay: 0.3s; }
+  /* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible > *:nth-child(4) {
+    transition-delay: 0.4s; }
+  /* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible > *:nth-child(5) {
+    transition-delay: 0.5s; }
+  /* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible > *:nth-child(6) {
+    transition-delay: 0.6s; }
+  /* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible > *:nth-child(7) {
+    transition-delay: 0.7s; }
+  /* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible > *:nth-child(8) {
+    transition-delay: 0.8s; }
+  /* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible > *:nth-child(9) {
+    transition-delay: 0.9s; }
+  /* line 13, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible > *:nth-child(10) {
+    transition-delay: 1s; }
+
+/* line 19, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+.animated-childs.visible.long-delay > * {
+  transition: opacity 0.8s; }
+  /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible.long-delay > *:nth-child(1) {
+    transition-delay: 0.125s; }
+  /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible.long-delay > *:nth-child(2) {
+    transition-delay: 0.25s; }
+  /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible.long-delay > *:nth-child(3) {
+    transition-delay: 0.375s; }
+  /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible.long-delay > *:nth-child(4) {
+    transition-delay: 0.5s; }
+  /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible.long-delay > *:nth-child(5) {
+    transition-delay: 0.625s; }
+  /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible.long-delay > *:nth-child(6) {
+    transition-delay: 0.75s; }
+  /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible.long-delay > *:nth-child(7) {
+    transition-delay: 0.875s; }
+  /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible.long-delay > *:nth-child(8) {
+    transition-delay: 1s; }
+  /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible.long-delay > *:nth-child(9) {
+    transition-delay: 1.125s; }
+  /* line 22, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/_animation.scss */
+  .animated-childs.visible.long-delay > *:nth-child(10) {
+    transition-delay: 1.25s; }
+
+/* line 15, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+#canv_modal {
+  position: fixed;
+  z-index: 9;
+  background: #eee;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-out; }
+  /* line 25, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+  #canv_modal #canv {
+    transform: scale(0.2);
+    transition: 0.65s ease-out; }
+    /* line 29, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+    #canv_modal #canv canvas {
+      cursor: grab; }
+      /* line 31, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+      #canv_modal #canv canvas:active {
+        cursor: grabbing; }
+  /* line 37, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+  #canv_modal.open {
+    transition: 0.3s ease-out;
+    visibility: visible;
+    opacity: 1; }
+    /* line 42, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+    #canv_modal.open #canv {
+      transform: scale(1); }
+    /* line 48, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+    #canv_modal.open #canv_close:before, #canv_modal.open #canv_close:after {
+      opacity: 1; }
+    /* line 53, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+    #canv_modal.open #canv_close:before {
+      transform: rotate(45deg); }
+    /* line 57, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+    #canv_modal.open #canv_close:after {
+      transform: rotate(-45deg); }
+
+/* line 64, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+#canv_close {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 3em;
+  height: 3em;
+  cursor: pointer; }
+  /* line 76, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+  #canv_close:hover:before, #canv_close:hover:after {
+    box-shadow: 0 0 5px 2px #777; }
+  /* line 82, ../../Users/prive/OneDrive/Документы/Модель_блок/scss/style.scss */
+  #canv_close:before, #canv_close:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 4px;
+    background: #aaa;
+    box-shadow: 0 0 3px 1px #777;
+    opacity: 0;
+    transition: 0.15s, transform .25s .4s ease-in, opacity .25s .45s; }
+
+/*# sourceMappingURL=style.css.map */

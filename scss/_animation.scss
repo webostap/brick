@@ -1,0 +1,30 @@
+.animated-childs {
+    > * {
+        opacity: 0;
+        transition: opacity 0s;
+    }
+
+    &.visible {
+        > * {
+            opacity: 1;
+            transition: opacity 0.4s;
+
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    transition-delay: #{$i/10}s;
+                }
+            }
+        }
+        &.long-delay {
+            > * {
+                transition: opacity 0.8s;
+                @for $i from 1 through 10 {
+                    &:nth-child(#{$i}) {
+                        transition-delay: #{$i/8}s;
+                    }
+                }
+            }
+        }
+    }
+
+}

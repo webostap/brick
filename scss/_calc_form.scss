@@ -1,0 +1,113 @@
+.brick-calc {
+    max-width: 960px;
+    max-width: max-content;
+    margin: 0 auto;
+    padding: 100px 30px;
+
+    //    background: #eee;
+    //    height: 1000px;
+    h2 {
+        text-align: center;
+        margin-bottom: 70px;
+        border-bottom: 10px solid var(--primary);
+    }
+
+    &__butns {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+.form-select {
+    //    max-width: fit-content;
+}
+
+.brick-calc {
+    max-width: 960px;
+
+    form {
+        input[type='number'] {
+            text-align: center;
+            font-weight: 500;
+            -moz-appearance: textfield;
+            -webkit-appearance: none;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+               -webkit-appearance: none;
+               margin: 0;
+            }
+        }
+
+        input[type='text'] {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        select {
+            text-align-last: center;
+            font-weight: 500;
+        }
+    }
+}
+.input-group {
+    --igt-width: 120px;
+}
+.input-group-text {
+    min-width: var(--igt-width);
+    justify-content: center;
+}
+
+.input-group.js-numbers {
+    position: relative;
+
+    &:hover {
+
+        .nc-plus,
+        .nc-minus {
+            transition: opacity .15s;//, transform 0.1s;
+            opacity: 1;
+        }
+    }
+
+    .nc-plus,
+    .nc-minus {
+        transition: opacity .35s;
+        opacity: 0;
+        position: absolute;
+        z-index: 4;
+        top: calc(50% - 1.1em);
+//        transform: translateY(-50%);
+        padding: 0.3em 1em;
+
+        font-size: 1.2em;
+        font-weight: bold;
+        color: var(--primary);
+        color: #444;
+        cursor: pointer;
+
+        &:hover {
+//            background: blue;
+            transform: scale(1.2);
+            transform-origin: 50% 55%;
+        }
+    }
+
+    .nc-minus {
+        left: 2px;
+        &:before {
+            content: '‒';
+        }
+    }
+
+    .nc-plus {
+        right: var(--igt-width);
+        &:before {
+            content: '+';
+        }
+    }
+}
